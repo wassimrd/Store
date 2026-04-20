@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<title>Wassim Store</title>
+
+<style>
+body {
+  margin:0;
+  font-family: Arial;
+  background:#0f172a;
+  color:white;
+}
+
+/* Navbar */
+.nav {
+  display:flex;
+  justify-content:space-between;
+  padding:15px;
+  background:#020617;
+}
+
+.logo {
+  font-size:22px;
+  font-weight:bold;
+  color:#38bdf8;
+}
+
+/* Hero */
+.hero {
+  text-align:center;
+  padding:60px;
+  animation:fadeIn 1s ease;
+}
+
+.hero h1 {
+  font-size:40px;
+}
+
+.hero button {
+  padding:12px 25px;
+  background:#38bdf8;
+  border:none;
+  border-radius:10px;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.hero button:hover {
+  background:#0ea5e9;
+  transform:scale(1.1);
+}
+
+/* PRODUCTS SLIDER */
+.products {
+  display:flex;
+  overflow-x:auto;
+  gap:20px;
+  padding:20px;
+  scroll-behavior:smooth;
+}
+
+.products::-webkit-scrollbar {
+  display:none;
+}
+
+.card {
+  min-width:200px;
+  background:#1e293b;
+  padding:15px;
+  border-radius:15px;
+  transition:0.3s;
+  animation:fadeUp 0.7s ease;
+}
+
+.card:hover {
+  transform:scale(1.08);
+}
+
+.card img {
+  width:100%;
+  border-radius:10px;
+}
+
+.price {
+  color:#38bdf8;
+}
+
+/* Button */
+.buy {
+  margin-top:10px;
+  width:100%;
+  padding:10px;
+  background:#38bdf8;
+  border:none;
+  border-radius:10px;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.buy:hover {
+  background:#0ea5e9;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {opacity:0;}
+  to {opacity:1;}
+}
+
+@keyframes fadeUp {
+  from {
+    opacity:0;
+    transform:translateY(20px);
+  }
+  to {
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="nav">
+  <div class="logo">Wassim Store</div>
+  <div>Home | Shop | Contact</div>
+</div>
+
+<div class="hero">
+  <h1>مرحبا بك فالمتجر ديالك 🔥</h1>
+  <p>أفضل المنتجات بأثمنة رائعة</p>
+  <button onclick="scrollProducts()">تسوق الآن</button>
+</div>
+
+<div class="products" id="products">
+
+  <div class="card">
+    <img src="https://via.placeholder.com/200">
+    <h3>Shoes</h3>
+    <p class="price">$20</p>
+    <button class="buy">Buy Now</button>
+  </div>
+
+  <div class="card">
+    <img src="https://via.placeholder.com/200">
+    <h3>Watch</h3>
+    <p class="price">$35</p>
+    <button class="buy">Buy Now</button>
+  </div>
+
+  <div class="card">
+    <img src="https://via.placeholder.com/200">
+    <h3>Headphones</h3>
+    <p class="price">$50</p>
+    <button class="buy">Buy Now</button>
+  </div>
+
+  <div class="card">
+    <img src="https://via.placeholder.com/200">
+    <h3>Phone</h3>
+    <p class="price">$120</p>
+    <button class="buy">Buy Now</button>
+  </div>
+
+</div>
+
+<script>
+function scrollProducts() {
+  document.getElementById("products").scrollIntoView({behavior: "smooth"});
+}
+</script>
+
+</body>
+</html>
